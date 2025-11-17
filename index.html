@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website - Computer Science Student">
+    <title>Your Name - CS Student Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Shane Lee | Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Hi, I'm <span class="highlight">Shane,</span>
+            </h1>
+            <p class="hero-subtitle">an Information Science Student @ Cornell University.</p>
+            <p class="hero-description">
+                Passionate about software development, technological inclusion, and building innovative solutions.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll down</span>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm an Information Science student with a passion for solving complex problems 
+                        through code. I enjoy working on projects that challenge me and help me grow 
+                        as a developer.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new option trading strategies,
+                        reading, or working on personal projects that interest me.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>Scale AI</h3>
+                            <p>GenAI Technical Advisor Intern</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Tech Tutors</h3>
+                            <p>Founder & Nonprofit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/JobTrack.png" alt="JobTrack project screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">JobTrack</h3>
+                        <p class="project-description">
+                            A simple, all-in-one tool for organizing job applications. It replaces
+                            messy spreadsheets with a clean dashboard for tracking statuses,
+                            searching roles, and keeping everything in one place—making the
+                            application process more manageable.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/slee112132/job-tracker" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Logical.ly.png" alt="Logical.ly project screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Logical.ly</h3>
+                        <p class="project-description">
+                            Logical.ly helps writers catch contradictions and unclear reasoning
+                            by automatically extracting claims and checking them against uploaded
+                            sources. It highlights inconsistencies and unsupported statements so
+                            users can write with confidence and clarity.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Neo4j</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/slee112132/ohmyclaude" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Kirby_Fall.png" alt="Kirby Fall game screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Kirby Fall</h3>
+                        <p class="project-description">
+                            A fast, replayable action game where players dodge obstacles and
+                            try to survive as long as possible. Smooth controls, funny music, escalating
+                            difficulty, and polished visuals result in a fun, addictive arcade-style 
+                            gameplay experience.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">GDScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/slee112132/kirby-city-escape" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Web Development</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">Express</span>
+                        <span class="skill-item">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Linux</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">
+                I'm always open to discussing new opportunities, interesting projects, 
+                or just having a chat about technology!
+            </p>
+            <div class="contact-links">
+                <a href="mailto:ssl244@cornell.edu" class="contact-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/slee112132?tab=repositories" class="contact-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/shane-lee-23601b2b8/" class="contact-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Shane Lee. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
