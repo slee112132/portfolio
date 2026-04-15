@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website - Information Science Student">
-    <title>Shane Lee</title>
+    <meta name="description" content="Shane Lee is a Cornell Information Science student building full-stack and AI-powered products, with experience at Scale AI and as the founder of Tech Tutors.">
+    <title>Shane Lee | Software Engineer Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -35,15 +36,21 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">
-                Hi, I'm <span class="highlight">Shane,</span>
+                Shane Lee
             </h1>
-            <p class="hero-subtitle">an Information Science Student @ Cornell University.</p>
+            <p class="hero-subtitle">Cornell Information Science student building full-stack and AI-powered products.</p>
             <p class="hero-description">
-                Passionate about software development, technological inclusion, and building innovative solutions.
+                I enjoy turning messy, real-world problems into useful software, with experience spanning GenAI evaluation at Scale AI, nonprofit leadership through Tech Tutors, and product-focused engineering across web and AI systems.
             </p>
+            <div class="hero-highlights">
+                <span class="hero-pill">Cornell University</span>
+                <span class="hero-pill">Scale AI Intern</span>
+                <span class="hero-pill">Founder, Tech Tutors</span>
+                <span class="hero-pill">Based in Ithaca, NY</span>
+            </div>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#experience" class="btn btn-secondary">View Experience</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -59,25 +66,62 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm an Information Science student with a passion for solving complex problems 
-                        through code. I enjoy working on projects that challenge me and help me grow 
-                        as a developer.
+                        I'm an Information Science student at Cornell with a minor in Computer Science, focused on building software that is both technically thoughtful and genuinely useful. I like working at the intersection of product, engineering, and AI, especially when the problem is messy and the solution needs to be practical.
                     </p>
                     <p>
-                        When I'm not coding, you can find me exploring new option trading strategies,
-                        reading, or working on personal projects that interest me.
+                        My experience ranges from improving reasoning reliability for large language models at Scale AI to founding Tech Tutors, a nonprofit that introduced young students and older adults to technology through accessible, hands-on instruction. Across each project, I care about clarity, usability, and building systems that help real people.
                     </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <h3>Scale AI</h3>
-                            <p>GenAI Technical Advisor Intern</p>
+                            <h3>3.7</h3>
+                            <p>Cornell GPA</p>
                         </div>
                         <div class="stat">
-                            <h3>Tech Tutors</h3>
-                            <p>Founder & Nonprofit</p>
+                            <h3>40+</h3>
+                            <p>Youth Introduced to Python</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20%</h3>
+                            <p>Reasoning Reliability Improvement</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <p class="experience-company">Scale AI</p>
+                            <h3>GenAI Technical Advisor Intern</h3>
+                        </div>
+                        <p class="experience-meta">Remote | May 2025 - Sep 2025</p>
+                    </div>
+                    <ul class="experience-points">
+                        <li>Engineered and optimized prompts for large language models through quantitative ground-truth benchmarking and systematic error analysis, improving mathematical reasoning accuracy and consistency across diverse task sets.</li>
+                        <li>Partnered cross-functionally with reviewers and engineers to assess model outputs, debug edge cases, and refine large-scale systems that improved reasoning reliability by 20%.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <p class="experience-company">Tech Tutors</p>
+                            <h3>Founder</h3>
+                        </div>
+                        <p class="experience-meta">Northvale, NJ | Oct 2021 - Jun 2023</p>
+                    </div>
+                    <ul class="experience-points">
+                        <li>Founded and led a nonprofit that introduced over 40 local youth to Python through workshops, interactive projects, and detailed mentorship.</li>
+                        <li>Organized digital literacy workshops for older adults covering email, web navigation, and smartphone basics to improve digital confidence and independence.</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -87,24 +131,24 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card featured-project">
                     <div class="project-image">
                         <img src="images/JobTrack.png" alt="JobTrack project screenshot">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">JobTrack</h3>
                         <p class="project-description">
-                            A simple, all-in-one tool for organizing job applications. It replaces
-                            messy spreadsheets with a clean dashboard for tracking statuses,
-                            searching roles, and keeping everything in one place—making the
-                            application process more manageable.
+                            A full-stack job tracking system built to replace messy spreadsheets with a cleaner workflow for managing applications. I engineered a MERN app with dynamic search, robust CRUD flows, modular Express REST endpoints, and Zod-backed validation for reliable data handling.
+                        </p>
+                        <p class="project-description">
+                            On the backend, I also implemented a secure server-side LLM wrapper with request validation, configurable execution modes, and moderation-aware safeguards, making the project more than a standard CRUD dashboard.
                         </p>
                         <div class="project-tags">
                             <span class="tag">MongoDB</span>
                             <span class="tag">Express</span>
                             <span class="tag">React</span>
                             <span class="tag">Node.js</span>
-                            
+                            <span class="tag">Zod</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/slee112132/job-tracker" class="project-link" target="_blank">GitHub</a>
@@ -119,16 +163,17 @@
                     <div class="project-content">
                         <h3 class="project-title">Logical.ly</h3>
                         <p class="project-description">
-                            Logical.ly helps writers catch contradictions and unclear reasoning
-                            by automatically extracting claims and checking them against uploaded
-                            sources. It highlights inconsistencies and unsupported statements so
-                            users can write with confidence and clarity.
+                            Logical.ly is an AI-assisted fact-checking editor that extracts claims from user writing, compares them against uploaded sources, and flags contradictions with provenance-aware reasoning.
+                        </p>
+                        <p class="project-description">
+                            I helped build a multi-stage pipeline spanning claim extraction, graph-based retrieval, and LLM contradiction analysis. The system combined Neo4j queries, structured backend processing, and a hybrid LLM plus knowledge-graph approach that reduced hallucinated conflicts by 35%.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">TypeScript</span>
                             <span class="tag">Neo4j</span>
                             <span class="tag">Flask</span>
+                            <span class="tag">Claude API</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/slee112132/ohmyclaude" class="project-link" target="_blank">GitHub</a>
@@ -143,16 +188,38 @@
                     <div class="project-content">
                         <h3 class="project-title">Kirby Fall</h3>
                         <p class="project-description">
-                            A fast, replayable action game where players dodge obstacles and
-                            try to survive as long as possible. Smooth controls, funny music, escalating
-                            difficulty, and polished visuals result in a fun, addictive arcade-style 
-                            gameplay experience.
+                            Kirby Fall is a polished vertical-scrolling action game built in Godot 4 with fluid movement, responsive physics interactions, and a modular scene-based architecture.
+                        </p>
+                        <p class="project-description">
+                            I implemented reusable gameplay systems for procedural obstacle spawning, adaptive difficulty scaling, and signal-driven event logic, then tied them together with custom UI states, score tracking, and visual feedback to keep the game replayable and cohesive.
                         </p>
                         <div class="project-tags">
                             <span class="tag">GDScript</span>
+                            <span class="tag">Godot 4</span>
+                            <span class="tag">Game Systems</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/slee112132/kirby-city-escape" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image project-placeholder">
+                        <span>K&amp;L Delicatessen</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">K&amp;L Delicatessen Website</h3>
+                        <p class="project-description">
+                            I designed and developed the official website for a Jackson Heights eatery, focusing on a responsive interface and a smooth ordering experience for real customers.
+                        </p>
+                        <p class="project-description">
+                            By integrating Toast for pickup and delivery orders, the site helped increase user traffic by 17%, making it a strong example of shipping practical software with measurable business impact.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive UI</span>
+                            <span class="tag">Toast Integration</span>
                         </div>
                     </div>
                 </div>
@@ -166,33 +233,38 @@
             <h2 class="section-title">Skills</h2>
             <div class="skills-content">
                 <div class="skills-category">
-                    <h3>Programming Languages</h3>
+                    <h3>Languages</h3>
                     <div class="skills-list">
                         <span class="skill-item">Python</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">C++</span>
                         <span class="skill-item">TypeScript</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">GDScript</span>
                     </div>
                 </div>
                 <div class="skills-category">
-                    <h3>Web Development</h3>
+                    <h3>Full-Stack & AI</h3>
                     <div class="skills-list">
                         <span class="skill-item">React</span>
                         <span class="skill-item">Node.js</span>
-                        <span class="skill-item">HTML/CSS</span>
                         <span class="skill-item">Express</span>
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">FastAPI</span>
                         <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">Prompt Evaluation</span>
                     </div>
                 </div>
                 <div class="skills-category">
-                    <h3>Tools & Technologies</h3>
+                    <h3>Data, Tools & Platforms</h3>
                     <div class="skills-list">
                         <span class="skill-item">Git</span>
                         <span class="skill-item">Docker</span>
                         <span class="skill-item">Linux</span>
                         <span class="skill-item">MongoDB</span>
-                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">Neo4j</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">Pandas</span>
                     </div>
                 </div>
             </div>
@@ -204,8 +276,7 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="contact-description">
-                I'm always open to discussing new opportunities, interesting projects, 
-                or just having a chat about technology!
+                I'm currently interested in software engineering opportunities where I can contribute across product thinking, implementation, and iteration. If you're hiring for internships or early-career roles, I'd love to connect.
             </p>
             <div class="contact-links">
                 <a href="mailto:ssl244@cornell.edu?subject=Portfolio%20Inquiry" class="contact-link">
@@ -243,4 +314,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
