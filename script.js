@@ -1,110 +1,94 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// Mobile navigation
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
+    const open = navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
+navMenu.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
     });
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// In-game style clock: MM/DD DAY + time of day.
+// Midnight (12 AM) is the Dark Hour.
+const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
-// Navbar background on scroll
+function timeOfDay(hour) {
+    if (hour === 0) return 'DARK HOUR';
+    if (hour < 5) return 'LATE NIGHT';
+    if (hour < 8) return 'EARLY MORNING';
+    if (hour < 12) return 'MORNING';
+    if (hour < 15) return 'DAYTIME';
+    if (hour < 18) return 'AFTERNOON';
+    if (hour < 23) return 'EVENING';
+    return 'LATE NIGHT';
+}
+
+function updateClock() {
+    const now = new Date();
+    const mm = String(now.getMonth() + 1).padStart(2, '0');
+    const dd = String(now.getDate()).padStart(2, '0');
+    const tod = timeOfDay(now.getHours());
+
+    document.getElementById('clock-date').textContent = mm + '/' + dd;
+    document.getElementById('clock-day').textContent = DAYS[now.getDay()];
+
+    const todEl = document.getElementById('clock-tod');
+    todEl.textContent = tod;
+    todEl.classList.toggle('dark-hour', tod === 'DARK HOUR');
+}
+
+updateClock();
+setInterval(updateClock, 30 * 1000);
+
+// Navbar shadow on scroll
 const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-    
-    lastScroll = currentScroll;
-});
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+// Reveal-on-scroll with a slight stagger per section
+const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('in');
+            revealObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.project-card, .skills-category, .stat');
-    
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+document.querySelectorAll('.section').forEach(section => {
+    section.querySelectorAll('.reveal').forEach((el, i) => {
+        el.style.transitionDelay = Math.min(i * 90, 450) + 'ms';
+        revealObserver.observe(el);
     });
 });
 
-// Active navigation link highlighting
+// Active nav link highlighting
 const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
 window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset;
+    const scrollY = window.scrollY + 140;
+    let currentId = null;
 
     sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            if (navLink) {
-                navLink.classList.add('active');
-            }
+        if (scrollY >= section.offsetTop && scrollY < section.offsetTop + section.offsetHeight) {
+            currentId = section.id;
         }
     });
-});
 
-// Add active class styling
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: var(--primary-color);
-    }
-    .nav-link.active::after {
-        width: 100%;
-    }
-`;
-document.head.appendChild(style);
-
+    navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+    });
+}, { passive: true });

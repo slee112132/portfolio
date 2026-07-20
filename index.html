@@ -6,137 +6,205 @@
     <meta name="description" content="Shane Lee is a Cornell Information Science student building full-stack and AI-powered products, with experience at Scale AI and as the founder of Tech Tutors.">
     <title>Shane Lee | Software Engineer Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Shane Lee | Portfolio</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="#home" class="nav-logo">
+                <span class="nav-logo-mark">SL</span>
+                <span class="nav-logo-text">SHANE LEE</span>
+            </a>
+
+            <div class="nav-clock" id="nav-clock" aria-hidden="true">
+                <span class="clock-date" id="clock-date">--/--</span>
+                <span class="clock-day" id="clock-day">---</span>
+                <span class="clock-tod" id="clock-tod">......</span>
             </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link"><span class="nav-word">STATUS</span><span class="nav-sub">About</span></a></li>
+                <li><a href="#experience" class="nav-link"><span class="nav-word">PERSONA</span><span class="nav-sub">Experience</span></a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-word">REQUESTS</span><span class="nav-sub">Projects</span></a></li>
+                <li><a href="#skills" class="nav-link"><span class="nav-word">SKILL</span><span class="nav-sub">Skills</span></a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-word">SOCIAL LINK</span><span class="nav-sub">Contact</span></a></li>
+                <li><a href="resume.pdf" target="_blank" class="nav-link nav-resume"><span class="nav-word">RESUME</span><span class="nav-sub">PDF</span></a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
+        <div class="hero-stripes" aria-hidden="true"></div>
+        <div class="hero-moon" aria-hidden="true"></div>
+        <div class="hero-watermark" aria-hidden="true">MEMENTO&nbsp;MORI</div>
+
         <div class="hero-content">
+            <p class="hero-kicker">// SOFTWARE ENGINEER — ITHACA, NY</p>
             <h1 class="hero-title">
-                Shane Lee
+                <span class="hero-title-line">SHANE</span>
+                <span class="hero-title-line hero-title-accent">LEE</span>
             </h1>
-            <p class="hero-subtitle">Cornell Information Science student building full-stack and AI-powered products.</p>
+            <div class="hero-sub-slab">
+                <p class="hero-subtitle">Cornell Information Science student building full-stack and AI-powered products.</p>
+            </div>
+            <p class="hero-status"><span class="blink">▶</span> NOW SEEKING: SOFTWARE ENGINEERING INTERNSHIPS</p>
             <p class="hero-description">
                 I enjoy turning messy, real-world problems into useful software, with experience spanning GenAI evaluation at Scale AI, nonprofit leadership through Tech Tutors, and product-focused engineering across web and AI systems.
             </p>
-            <div class="hero-highlights">
-                <span class="hero-pill">Cornell University</span>
-                <span class="hero-pill">Scale AI Intern</span>
-                <span class="hero-pill">Founder, Tech Tutors</span>
-                <span class="hero-pill">Based in Ithaca, NY</span>
+            <div class="hero-pills">
+                <span class="pill">CORNELL UNIVERSITY</span>
+                <span class="pill">SCALE AI INTERN</span>
+                <span class="pill">FOUNDER, TECH TUTORS</span>
             </div>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#experience" class="btn btn-secondary">View Experience</a>
+                <a href="#projects" class="btn btn-primary">VIEW MY WORK</a>
+                <a href="resume.pdf" target="_blank" class="btn btn-secondary">RESUME</a>
+            </div>
+            <div class="hero-links">
+                <a href="https://github.com/slee112132?tab=repositories" target="_blank" class="hero-link">GITHUB ↗</a>
+                <a href="https://www.linkedin.com/in/shane-lee-23601b2b8/" target="_blank" class="hero-link">LINKEDIN ↗</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll down</span>
-            <div class="arrow"></div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>SCROLL</span>
+            <span class="scroll-arrow">▼</span>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- About / STATUS -->
+    <section id="about" class="section section-alt">
+        <div class="section-slash" aria-hidden="true"></div>
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
+            <header class="section-head reveal">
+                <span class="section-label">01 // ABOUT ME</span>
+                <h2 class="section-title">STATUS</h2>
+            </header>
+            <div class="about-grid">
+                <div class="about-text reveal">
                     <p>
                         I'm an Information Science student at Cornell with a minor in Computer Science, focused on building software that is both technically thoughtful and genuinely useful. I like working at the intersection of product, engineering, and AI, especially when the problem is messy and the solution needs to be practical.
                     </p>
                     <p>
                         My experience ranges from improving reasoning reliability for large language models at Scale AI to founding Tech Tutors, a nonprofit that introduced young students and older adults to technology through accessible, hands-on instruction. Across each project, I care about clarity, usability, and building systems that help real people.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>3.7</h3>
-                            <p>Cornell GPA</p>
-                        </div>
-                        <div class="stat">
-                            <h3>40+</h3>
-                            <p>Youth Introduced to Python</p>
-                        </div>
-                        <div class="stat">
-                            <h3>20%</h3>
-                            <p>Reasoning Reliability Improvement</p>
-                        </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat reveal">
+                        <span class="stat-value">40+</span>
+                        <span class="stat-name">YOUTH INTRODUCED TO PYTHON</span>
+                    </div>
+                    <div class="stat reveal">
+                        <span class="stat-value">20%</span>
+                        <span class="stat-name">REASONING RELIABILITY IMPROVEMENT</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <!-- Experience / PERSONA -->
+    <section id="experience" class="section">
+        <div class="section-slash flip" aria-hidden="true"></div>
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <header class="section-head reveal">
+                <span class="section-label">02 // EXPERIENCE</span>
+                <h2 class="section-title">PERSONA</h2>
+            </header>
             <div class="experience-list">
-                <article class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <p class="experience-company">Scale AI</p>
-                            <h3>GenAI Technical Advisor Intern</h3>
+                <article class="experience-card reveal">
+                    <div class="exp-rank">RANK<b>01</b></div>
+                    <div class="exp-body">
+                        <div class="exp-head">
+                            <div>
+                                <p class="exp-company">SCALE AI</p>
+                                <h3 class="exp-role">GenAI Technical Advisor Intern</h3>
+                            </div>
+                            <p class="exp-meta">REMOTE — MAY 2025 → SEP 2025</p>
                         </div>
-                        <p class="experience-meta">Remote | May 2025 - Sep 2025</p>
+                        <ul class="exp-points">
+                            <li>Engineered and optimized prompts for large language models through quantitative ground-truth benchmarking and systematic error analysis, improving mathematical reasoning accuracy and consistency across diverse task sets.</li>
+                            <li>Partnered cross-functionally with reviewers and engineers to assess model outputs, debug edge cases, and refine large-scale systems that improved reasoning reliability by 20%.</li>
+                        </ul>
                     </div>
-                    <ul class="experience-points">
-                        <li>Engineered and optimized prompts for large language models through quantitative ground-truth benchmarking and systematic error analysis, improving mathematical reasoning accuracy and consistency across diverse task sets.</li>
-                        <li>Partnered cross-functionally with reviewers and engineers to assess model outputs, debug edge cases, and refine large-scale systems that improved reasoning reliability by 20%.</li>
-                    </ul>
                 </article>
 
-                <article class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <p class="experience-company">Tech Tutors</p>
-                            <h3>Founder</h3>
+                <article class="experience-card reveal">
+                    <div class="exp-rank">RANK<b>02</b></div>
+                    <div class="exp-body">
+                        <div class="exp-head">
+                            <div>
+                                <p class="exp-company">TECH TUTORS</p>
+                                <h3 class="exp-role">Founder</h3>
+                            </div>
+                            <p class="exp-meta">NORTHVALE, NJ — OCT 2021 → JUN 2023</p>
                         </div>
-                        <p class="experience-meta">Northvale, NJ | Oct 2021 - Jun 2023</p>
+                        <ul class="exp-points">
+                            <li>Founded and led a nonprofit that introduced over 40 local youth to Python through workshops, interactive projects, and detailed mentorship.</li>
+                            <li>Organized digital literacy workshops for older adults covering email, web navigation, and smartphone basics to improve digital confidence and independence.</li>
+                        </ul>
                     </div>
-                    <ul class="experience-points">
-                        <li>Founded and led a nonprofit that introduced over 40 local youth to Python through workshops, interactive projects, and detailed mentorship.</li>
-                        <li>Organized digital literacy workshops for older adults covering email, web navigation, and smartphone basics to improve digital confidence and independence.</li>
-                    </ul>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Projects / REQUESTS -->
+    <section id="projects" class="section section-alt">
+        <div class="section-slash" aria-hidden="true"></div>
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <header class="section-head reveal">
+                <span class="section-label">03 // PROJECTS</span>
+                <h2 class="section-title">REQUESTS</h2>
+            </header>
             <div class="projects-grid">
-                <div class="project-card featured-project">
+
+                <article class="project-card featured reveal">
                     <div class="project-image">
-                        <img src="images/JobTrack.png" alt="JobTrack project screenshot">
+                        <img src="images/Logical.ly.png" alt="Logical.ly project screenshot">
+                        <span class="project-no">REQ. 01</span>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">JobTrack</h3>
+                        <h3 class="project-title">LOGICAL.LY</h3>
+                        <p class="project-description">
+                            Logical.ly is an AI-assisted fact-checking editor that extracts claims from user writing, compares them against uploaded sources, and flags contradictions with provenance-aware reasoning.
+                        </p>
+                        <p class="project-description">
+                            I helped build a multi-stage reasoning pipeline spanning claim extraction, symbolic retrieval, and LLM contradiction analysis. The system combined Neo4j queries, graph-based candidate selection, and structured backend processing to reduce hallucinated conflicts by 35% while improving precision and latency.
+                        </p>
+                        <p class="project-description">
+                            On the backend, I worked on document ingestion, schema-constrained claim extraction, dynamic knowledge graph construction, and graph-based claim matching to narrow evidence candidates before final LLM evaluation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">PYTHON</span>
+                            <span class="tag">TYPESCRIPT</span>
+                            <span class="tag">NEO4J</span>
+                            <span class="tag">FLASK</span>
+                            <span class="tag">CLAUDE API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/slee112132/ohmyclaude" target="_blank" class="project-link">GITHUB ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <img src="images/JobTrack.png" alt="JobTrack project screenshot">
+                        <span class="project-no">REQ. 02</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">JOBTRACK</h3>
                         <p class="project-description">
                             A full-stack job tracking system built to replace messy spreadsheets with a cleaner workflow for managing applications. I engineered a MERN app with dynamic search, robust CRUD flows, modular Express REST endpoints, and Zod-backed validation for reliable data handling.
                         </p>
@@ -144,49 +212,25 @@
                             On the backend, I also implemented a secure server-side LLM wrapper with request validation, configurable execution modes, and moderation-aware safeguards, making the project more than a standard CRUD dashboard.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Zod</span>
+                            <span class="tag">MONGODB</span>
+                            <span class="tag">EXPRESS</span>
+                            <span class="tag">REACT</span>
+                            <span class="tag">NODE.JS</span>
+                            <span class="tag">ZOD</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/slee112132/job-tracker" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://github.com/slee112132/job-tracker" target="_blank" class="project-link">GITHUB ↗</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/Logical.ly.png" alt="Logical.ly project screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Logical.ly</h3>
-                        <p class="project-description">
-                            Logical.ly is an AI-assisted fact-checking editor that extracts claims from user writing, compares them against uploaded sources, and flags contradictions with provenance-aware reasoning.
-                        </p>
-                        <p class="project-description">
-                            I helped build a multi-stage pipeline spanning claim extraction, graph-based retrieval, and LLM contradiction analysis. The system combined Neo4j queries, structured backend processing, and a hybrid LLM plus knowledge-graph approach that reduced hallucinated conflicts by 35%.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Neo4j</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">Claude API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/slee112132/ohmyclaude" class="project-link" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
+                <article class="project-card reveal">
                     <div class="project-image">
                         <img src="images/Kirby_Fall.png" alt="Kirby Fall game screenshot">
+                        <span class="project-no">REQ. 03</span>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Kirby Fall</h3>
+                        <h3 class="project-title">KIRBY FALL</h3>
                         <p class="project-description">
                             Kirby Fall is a polished vertical-scrolling action game built in Godot 4 with fluid movement, responsive physics interactions, and a modular scene-based architecture.
                         </p>
@@ -194,120 +238,119 @@
                             I implemented reusable gameplay systems for procedural obstacle spawning, adaptive difficulty scaling, and signal-driven event logic, then tied them together with custom UI states, score tracking, and visual feedback to keep the game replayable and cohesive.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">GDScript</span>
-                            <span class="tag">Godot 4</span>
-                            <span class="tag">Game Systems</span>
+                            <span class="tag">GDSCRIPT</span>
+                            <span class="tag">GODOT 4</span>
+                            <span class="tag">GAME SYSTEMS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/slee112132/kirby-city-escape" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://github.com/slee112132/kirby-city-escape" target="_blank" class="project-link">GITHUB ↗</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
+                <article class="project-card reveal">
                     <div class="project-image project-placeholder">
-                        <span>K&amp;L Delicatessen</span>
+                        <span class="placeholder-word">CLUSTR</span>
+                        <span class="project-no">REQ. 04</span>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">K&amp;L Delicatessen Website</h3>
+                        <h3 class="project-title">CLUSTR</h3>
                         <p class="project-description">
-                            I designed and developed the official website for a Jackson Heights eatery, focusing on a responsive interface and a smooth ordering experience for real customers.
+                            Clustr is a local file-organization MVP that scans a folder, builds semantic representations for files, and suggests task-based clusters without automatically moving anything.
                         </p>
                         <p class="project-description">
-                            By integrating Toast for pickup and delivery orders, the site helped increase user traffic by 17%, making it a strong example of shipping practical software with measurable business impact.
+                            I built it with a Node.js and Express backend, a React frontend, SQLite caching, and OpenAI embeddings. The system recursively scans directories, extracts lightweight snippets from text files, caches embeddings by file path and modified time, and groups related files using cosine similarity rather than rigid folder rules.
+                        </p>
+                        <p class="project-description">
+                            The project stands out because it combines practical UX constraints with applied AI: users get suggested clusters and short labels, while retaining full control over whether any action should happen next.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Responsive UI</span>
-                            <span class="tag">Toast Integration</span>
+                            <span class="tag">NODE.JS</span>
+                            <span class="tag">EXPRESS</span>
+                            <span class="tag">REACT</span>
+                            <span class="tag">SQLITE</span>
+                            <span class="tag">OPENAI EMBEDDINGS</span>
                         </div>
                     </div>
-                </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- Skills / SKILL -->
+    <section id="skills" class="section">
+        <div class="section-slash flip" aria-hidden="true"></div>
         <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-content">
-                <div class="skills-category">
-                    <h3>Languages</h3>
+            <header class="section-head reveal">
+                <span class="section-label">04 // SKILLS</span>
+                <h2 class="section-title">SKILL</h2>
+            </header>
+            <div class="skills-grid">
+                <div class="skills-category reveal">
+                    <h3 class="skills-cat-title">LANGUAGES</h3>
                     <div class="skills-list">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">TypeScript</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">Java</span>
+                        <span class="skill-item">PYTHON</span>
+                        <span class="skill-item">TYPESCRIPT</span>
+                        <span class="skill-item">JAVASCRIPT</span>
+                        <span class="skill-item">JAVA</span>
                         <span class="skill-item">C++</span>
-                        <span class="skill-item">GDScript</span>
+                        <span class="skill-item">GDSCRIPT</span>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Full-Stack & AI</h3>
+                <div class="skills-category reveal">
+                    <h3 class="skills-cat-title">FULL-STACK &amp; AI</h3>
                     <div class="skills-list">
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">Node.js</span>
-                        <span class="skill-item">Express</span>
-                        <span class="skill-item">Flask</span>
-                        <span class="skill-item">FastAPI</span>
-                        <span class="skill-item">REST APIs</span>
-                        <span class="skill-item">Prompt Evaluation</span>
+                        <span class="skill-item">REACT</span>
+                        <span class="skill-item">NODE.JS</span>
+                        <span class="skill-item">EXPRESS</span>
+                        <span class="skill-item">FLASK</span>
+                        <span class="skill-item">FASTAPI</span>
+                        <span class="skill-item">REST APIS</span>
+                        <span class="skill-item">PROMPT EVALUATION</span>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Data, Tools & Platforms</h3>
+                <div class="skills-category reveal">
+                    <h3 class="skills-cat-title">DATA, TOOLS &amp; PLATFORMS</h3>
                     <div class="skills-list">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Linux</span>
-                        <span class="skill-item">MongoDB</span>
-                        <span class="skill-item">Neo4j</span>
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">Pandas</span>
+                        <span class="skill-item">GIT</span>
+                        <span class="skill-item">DOCKER</span>
+                        <span class="skill-item">LINUX</span>
+                        <span class="skill-item">MONGODB</span>
+                        <span class="skill-item">NEO4J</span>
+                        <span class="skill-item">MYSQL</span>
+                        <span class="skill-item">PANDAS</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact / SOCIAL LINK -->
+    <section id="contact" class="section section-alt contact">
+        <div class="section-slash" aria-hidden="true"></div>
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-description">
+            <header class="section-head reveal">
+                <span class="section-label">05 // CONTACT</span>
+                <h2 class="section-title">SOCIAL LINK</h2>
+            </header>
+            <p class="contact-description reveal">
                 I'm currently interested in software engineering opportunities where I can contribute across product thinking, implementation, and iteration. If you're hiring for internships or early-career roles, I'd love to connect.
             </p>
-            <div class="contact-links">
-                <a href="mailto:ssl244@cornell.edu?subject=Portfolio%20Inquiry" class="contact-link">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    <span>Email</span>
-                </a>
-                <a href="https://github.com/slee112132?tab=repositories" class="contact-link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/shane-lee-23601b2b8/" class="contact-link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                    <span>LinkedIn</span>
-                </a>
+            <p class="contact-flavor reveal">▶ THOU SHALT HAVE OUR BLESSING WHEN THOU CHOOSETH TO REACH OUT</p>
+            <div class="contact-links reveal">
+                <a href="mailto:ssl244@cornell.edu?subject=Portfolio%20Inquiry" class="contact-link">EMAIL</a>
+                <a href="https://github.com/slee112132?tab=repositories" target="_blank" class="contact-link">GITHUB</a>
+                <a href="https://www.linkedin.com/in/shane-lee-23601b2b8/" target="_blank" class="contact-link">LINKEDIN</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Shane Lee. Built with HTML, CSS, and JavaScript.</p>
+        <div class="container footer-inner">
+            <p>&copy; 2026 SHANE LEE — MEMENTO MORI</p>
+            <p class="footer-note">Built by hand with HTML, CSS, and JavaScript.</p>
         </div>
     </footer>
 
